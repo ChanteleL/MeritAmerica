@@ -1,0 +1,30 @@
+#contact-form {
+display: flex;
+flex-direction: column;
+background-color: white;
+padding-left: 20px;
+align-items: center;
+}
+
+#contact-form h2 {
+    text-align: left;
+    margin-top: 20px;
+    width: 95%;
+}
+
+#contact-form form {
+    width: 95%;
+}
+
+#contact-form form input {
+    width: 100%;
+}
+
+#contact-form form textarea {
+    width: 100%;
+}
+
+.submit {
+    width: 40%;
+    max-width: 400px;
+}

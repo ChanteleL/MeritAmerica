@@ -1,0 +1,57 @@
+main img {
+    object-fit: cover;
+    margin-right: 20px;
+    height: 350px;
+    width: 35%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.submit { /* used for store link in "Get refreshed" section */
+    width: 15%;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    color: #f6f5f5;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+body > main {
+    grid-area: main;
+    /* align-items: left; */
+    margin: 3px;
+}
+
+body > main > form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* form input, form select {
+    width: 310px;
+    margin-bottom: 12px;
+} */
+
+.input {
+    width: 20vw
+}
+
+@media screen and (max-width: 800px){
+    /* body > main {
+        flex-direction: column;
+    } */
+}

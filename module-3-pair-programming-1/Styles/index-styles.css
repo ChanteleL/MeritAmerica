@@ -1,0 +1,122 @@
+main img {
+    object-fit: cover;
+    margin-right: 20px;
+    height: 350px;
+    width: 35%;
+}
+
+ul li {
+    list-style: none;
+}
+
+main li:before {
+    content: '🍡';
+    margin-left: -31px;
+    padding-right: 8px;
+}
+
+main, section, footer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.store-button { /* used for store link in "Get refreshed" section */
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    color: #000000;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/***New Body */
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "main main"
+        "race refresh"
+        "footer footer";
+}
+
+body > main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 3px;
+}
+
+
+body > section#Popsicle-Race {
+    grid-area: race;
+    display: grid;
+    margin: 3px;
+
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+        "blue-pop pop-race"
+        "blue-pop paragraph"
+}
+
+#Popsicle-Race > img {
+    grid-area: blue-pop;
+}
+
+#Popsicle-Race > h2 {
+    grid-area: pop-race;
+    align-items: center;
+}
+
+#Popsicle-Race > p {
+    grid-area: paragraph;
+}
+
+body > section,
+body > section > section > h2,
+body > section > .store-button  {
+    text-align: center;
+}
+
+body > section p {
+    text-align: left;
+}
+
+body > section#Get-Refreshed {
+    grid-area: refresh;
+    margin: 3px;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "race"
+            "refresh"
+            "footer";
+    }
+
+    body > main {
+        flex-direction: column;
+    }
+
+    body > main > img {
+        width: 90%;
+    }
+
+    body > section#Popsicle-Race {    
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "blue-pop pop-race"
+            "paragraph paragraph"
+    }
+
+}
